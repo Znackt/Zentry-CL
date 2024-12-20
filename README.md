@@ -1,8 +1,43 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Zentry Clone
 
-Currently, two official plugins are available:
+A modern clone of Zentry.com built with cutting-edge web technologies.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
+
+This project is a clone of Zentry.com
+
+## Tech Stack
+
+- Frontend:
+  - React.js
+  - TailwindCSS
+
+- Backend:
+  - Node.js
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Znackt/Zentry-CL.git
+```
+
+2. Install dependencies:
+```bash
+cd Zentry-CL
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
