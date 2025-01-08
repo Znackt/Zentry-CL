@@ -1,4 +1,3 @@
-
 # Zentry Clone
 
 A modern clone of Zentry.com built with cutting-edge web technologies.
@@ -10,6 +9,7 @@ This project is a clone of Zentry.com
 ## Tech Stack
 
 - Frontend:
+
   - React.js
   - TailwindCSS
 
@@ -26,11 +26,13 @@ This project is a clone of Zentry.com
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/Znackt/Zentry-CL.git
 ```
 
 2. Install dependencies:
+
 ```bash
 cd Zentry-CL
 npm install
