@@ -1,6 +1,6 @@
 # Zentry Clone
 
-A modern clone of Zentry.com built with cutting-edge web technologies.
+A modern clone of Zentry.com built with web technologies.
 
 ## Overview
 
@@ -16,14 +16,12 @@ This project is a clone of Zentry.com
 - Backend:
   - Node.js
 
-## Getting Started
-
 ### Prerequisites
 
-- Node.js (v14 or higher)
+- Node.js (v22 or higher)
 - npm
 
-### Installation
+### Local Development
 
 1. Clone the repository:
 
@@ -42,4 +40,12 @@ npm install
 
 ```bash
 npm run dev
+```
+
+### Docker Installation
+
+1. Pull the image from Docker HUb and start it in an interactive mode:
+
+```bash
+docker run -it -p 5173:5173 znackt01/zentry-clone
 ```
