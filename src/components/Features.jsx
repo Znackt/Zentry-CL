@@ -1,29 +1,43 @@
 import { TiLocationArrow } from "react-icons/ti";
 import { useState, useRef } from "react";
 
-const BentoTilt = ({ children, className='' }) => {
-
-  const [transformStyle, settransformStyle] = useState('');
+const BentoTilt = ({ children, className = "" }) => {
+  const [transformStyle, settransformStyle] = useState("");
 
   const itemRef = useRef();
 
-  const handleMouseMove = (e) => {};
+  const handleMouseMove = (e) => {
+    if (!itemRef.current) return;
+
+    const { left, top, width, height } =
+      itemRef.current.getBoundingClientRect();
+
+    const relativeX = (e.clientX - left) / width;
+    const relativeY = (e.clientY - top) / height;
+
+    const tiltX = (relativeY - 0.5) * 25;
+    const tiltY = (relativeX - 0.5) * -25;
+
+    const newTransform = `perspective(700px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(0.95, 0.95, 0.95)`
+
+    settransformStyle(newTransform);
+  };
 
   const handleMouseLeave = (e) => {
-    settransformStyle('');
-  }
+    settransformStyle("");
+  };
   return (
-    <div 
+    <div
       className={className}
       ref={itemRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      style={{transform: transformStyle}}
-      >
-        {children}
+      style={{ transform: transformStyle }}
+    >
+      {children}
     </div>
-  )
-}
+  );
+};
 const BentoCard = ({ src, title, description }) => {
   return (
     <div className="relative size-full">
@@ -124,13 +138,13 @@ const Features = () => {
           </BentoTilt>
 
           <BentoTilt className="bento-tilt_2">
-              <video 
-                src="videos/feature-5.mp4"
-                loop
-                autoPlay
-                muted
-                className="size-full object-cover object-center"
-              />
+            <video
+              src="videos/feature-5.mp4"
+              loop
+              autoPlay
+              muted
+              className="size-full object-cover object-center"
+            />
           </BentoTilt>
         </div>
       </div>
